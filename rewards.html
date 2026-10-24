@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Rewards · Renew</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="rewards">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <div class="page-header">
+        <div><h1>Rewards</h1><p>Points and badges for every step forward.</p></div>
+      </div>
+      <div class="stack">
+        <section class="card">
+          <div class="grid cols-3">
+            <div class="stat"><span class="label">Total points</span><span class="value" id="pts">0</span><span class="sub" id="lvlName"></span></div>
+            <div style="grid-column: span 2; align-self:center">
+              <div class="small muted" id="lvlText" style="margin-bottom:8px"></div>
+              <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="lvlBar"><i id="lvlFill" style="width:0"></i></div>
+            </div>
+          </div>
+        </section>
+        <section class="card">
+          <div class="card-title"><h2>Badges</h2><span class="badge" id="badgeCount"></span></div>
+          <div class="badge-grid" id="badgeGrid"></div>
+        </section>
+        <div class="grid split">
+          <section class="card">
+            <div class="card-title"><h2>Recent activity</h2></div>
+            <div class="ledger" id="ledger"></div>
+          </section>
+          <section class="card" style="align-self:start">
+            <div class="card-title"><h2>How to earn points</h2></div>
+            <ul class="ledger">
+              <li class="ledger-row"><span>Resist a craving</span><span class="pts">+5</span></li>
+              <li class="ledger-row"><span>Win the focus game (daily)</span><span class="pts">+5</span></li>
+              <li class="ledger-row"><span>Log your mood (daily)</span><span class="pts">+2</span></li>
+              <li class="ledger-row"><span>Complete a habit</span><span class="pts">+1</span></li>
+              <li class="ledger-row"><span>Finish breathing (daily)</span><span class="pts">+3</span></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/rewards.js"></script>
+</body>
+</html>

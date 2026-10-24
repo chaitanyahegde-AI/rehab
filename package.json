@@ -1,0 +1,16 @@
+{
+  "name": "renew-recovery-app",
+  "version": "2.0.0",
+  "description": "Renew – a recovery companion: streaks, habits, mood tracking and an AI support chat.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js"
+  },
+  "engines": { "node": ">=18" },
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Mood · Renew</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="mood">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <div class="page-header">
+        <div><h1>How are you feeling?</h1><p>Naming a feeling takes away some of its power.</p></div>
+      </div>
+      <div class="grid split">
+        <div class="stack">
+          <section class="card">
+            <div class="card-title"><h2>Check in</h2></div>
+            <div class="mood-grid" id="moodGrid" role="group" aria-label="Select your mood"></div>
+            <div class="field" style="margin-top:18px">
+              <label for="moodNote">Anything you want to add? <span class="muted">(optional)</span></label>
+              <textarea id="moodNote" maxlength="280" placeholder="What’s on your mind, or what triggered this feeling?"></textarea>
+            </div>
+            <button class="btn" id="saveMoodBtn" type="button" disabled>Save mood</button>
+            <div id="moodMessage" class="mood-response hidden" role="status"></div>
+          </section>
+          <section class="card hidden" id="supportCard">
+            <div class="notice"><span><svg class="i" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><div><b>Rough few days?</b><br>
+              You’ve logged several heavy moods in a row. You don’t have to carry that alone. Try the <a href="chat.html">AI companion</a>, or call Tele-MANAS on <a href="tel:14416">14416</a> (free, 24×7).</div></div>
+          </section>
+          <section class="card">
+            <div class="card-title"><h2>Recent entries</h2></div>
+            <ul class="list" id="moodHistory"></ul>
+          </section>
+        </div>
+        <section class="card" style="align-self:start">
+          <div class="card-title"><h2>Last 7 days</h2></div>
+          <div class="bars" id="moodBars"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/mood.js"></script>
+</body>
+</html>

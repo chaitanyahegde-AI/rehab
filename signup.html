@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Create account · Renew</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="signup" data-auth="public">
+  <div class="auth">
+    <section class="auth-brand" aria-hidden="true">
+      <div class="logo"><span class="brand-mark"><svg class="i" viewBox="0 0 24 24"><path d="M12 22V12"/><path d="M12 12C12 7 8 4 3 4c0 5 3 8 9 8z"/><path d="M12 14c0-4 3-7 9-7 0 5-3 8-9 8z"/></svg></span>Renew</div>
+      <div>
+        <h2>Start your recovery journey.</h2>
+        <p>A few details help us personalise your streak and savings. Everything stays on your device.</p>
+        <ul class="auth-points">
+          <li><svg class="i" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Private by default</li>
+          <li><svg class="i" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>No judgement, just progress</li>
+          <li><svg class="i" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Free helplines one tap away</li>
+        </ul>
+      </div>
+      <div class="auth-foot">Renew is a self-help tool and not a substitute for professional care.</div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <h1>Create your account</h1>
+        <p class="sub">It takes less than a minute.</p>
+        <form id="signupForm" novalidate>
+          <div class="field">
+            <label for="suUser">Username</label>
+            <input id="suUser" type="text" autocomplete="username" autocapitalize="none" maxlength="24" required>
+            <span class="hint">3–24 characters: letters, numbers, dot, dash or underscore.</span>
+          </div>
+          <div class="field">
+            <label for="suPass">Password</label>
+            <div class="input-group">
+              <input id="suPass" type="password" autocomplete="new-password" minlength="6" required>
+              <button type="button" class="toggle-pass" data-toggle="suPass" aria-label="Show password">Show</button>
+            </div>
+            <span class="hint">At least 6 characters.</span>
+          </div>
+          <div class="field">
+            <label for="addictionSelect">What are you working on?</label>
+            <select id="addictionSelect" required>
+              <option value="">Select one…</option>
+              <option>Alcohol</option>
+              <option>Tobacco / Nicotine</option>
+              <option>Cannabis</option>
+              <option>Drugs</option>
+              <option>Gambling</option>
+              <option>Social media / Gaming</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="freq">How often did you use?</label>
+              <select id="freq">
+                <option value="multiple-daily">Several times a day</option>
+                <option value="daily" selected>Daily</option>
+                <option value="few-weekly">A few times a week</option>
+                <option value="weekly">About once a week</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="pay">Cost per use (₹)</label>
+              <input id="pay" type="number" min="0" step="1" inputmode="numeric" placeholder="Optional">
+            </div>
+          </div>
+          <div id="signupMsg" class="form-msg" role="alert" aria-live="assertive"></div>
+          <button class="btn btn-lg btn-block" type="submit">Create account</button>
+        </form>
+        <p class="auth-alt">Already have an account? <a href="index.html">Log in</a></p>
+      </div>
+    </section>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

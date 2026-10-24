@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Dashboard · Renew</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <div class="page-header">
+        <div>
+          <h1 id="greeting">Welcome</h1>
+          <p id="todayLine"></p>
+        </div>
+        <button class="btn btn-lg" id="cravingBtn" type="button">I’m having a craving</button>
+      </div>
+
+      <div class="stack">
+        <section class="card hero" aria-label="Your streak">
+          <div>
+            <div class="kicker">Current streak</div>
+            <div class="big"><span id="streakDays">0</span><small id="streakUnit">days</small></div>
+            <div class="small" style="opacity:.85;margin-top:6px" id="streakHours"></div>
+          </div>
+          <div class="meta">
+            <div>
+              <div class="small" style="opacity:.9;margin-bottom:6px" id="milestoneText"></div>
+              <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="milestoneBar"><i id="milestoneFill" style="width:0"></i></div>
+            </div>
+            <div class="meta-row">
+              <div><b id="bestStreak">0</b><span>Best streak (days)</span></div>
+              <div><b id="moneySaved">₹0</b><span>Estimated saved</span></div>
+              <div><b id="resistedCount">0</b><span>Cravings resisted</span></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="grid cols-4">
+          <div class="card stat"><span class="label">Points</span><span class="value" id="pointsVal">0</span><span class="sub" id="levelVal"></span></div>
+          <div class="card stat"><span class="label">Habits today</span><span class="value" id="habitsVal">0/0</span><span class="sub" id="habitsSub"></span></div>
+          <div class="card stat"><span class="label">Today’s mood</span><span class="value" id="moodVal">–</span><span class="sub" id="moodSub"></span></div>
+          <div class="card stat"><span class="label">Working on</span><span class="value" id="focusVal" style="font-size:20px;line-height:1.5"></span><span class="sub" id="focusSub"></span></div>
+        </div>
+
+        <div class="grid split">
+          <section class="card">
+            <div class="card-title"><h2>Last 7 days</h2></div>
+            <div id="chartBox"></div>
+            <div class="legend"><span><i style="background:var(--primary)"></i>Cravings resisted</span><span><i style="background:var(--danger)"></i>Slips logged</span></div>
+          </section>
+          <section class="card">
+            <div class="card-title"><h2>Check in</h2></div>
+            <div class="stack">
+              <button class="btn btn-block" id="resistedBtn" type="button">I resisted a craving (+5)</button>
+              <button class="btn btn-secondary btn-block" id="slipBtn" type="button">Log a slip</button>
+              <a class="btn btn-secondary btn-block" href="mood.html">Log my mood</a>
+              <p class="muted small">A slip isn’t failure. Logging it honestly helps you see patterns and keep going.</p>
+            </div>
+          </section>
+        </div>
+
+        <section class="card">
+          <div class="card-title"><h2>Today’s habits</h2><a class="small" href="habits.html">Manage</a></div>
+          <ul class="list" id="habitList"></ul>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+  <script src="js/exercises.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

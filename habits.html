@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Habits · Renew</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="habits">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <div class="page-header">
+        <div><h1>Daily habits</h1><p>Replace old routines with ones that move you forward.</p></div>
+        <div class="badge" id="streakBadge">Today: 0/0</div>
+      </div>
+      <div class="grid split">
+        <section class="card">
+          <div class="card-title"><h2>Your habits</h2></div>
+          <ul class="list" id="habitList"></ul>
+        </section>
+        <section class="card">
+          <div class="card-title"><h2>Add a habit</h2></div>
+          <form class="inline-form" id="habitForm">
+            <label class="sr-only" for="habitInput">New habit</label>
+            <input id="habitInput" type="text" maxlength="60" placeholder="e.g. Walk for 20 minutes" autocomplete="off">
+            <button class="btn" type="submit">Add</button>
+          </form>
+          <p class="muted small" style="margin:16px 0 10px">Need ideas?</p>
+          <div class="chips" id="suggestions"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/habits.js"></script>
+</body>
+</html>

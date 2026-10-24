@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Emergency help · Renew</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="emergency">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <div class="page-header">
+        <div><h1>Get help now</h1><p>You are not alone. These services are free and confidential.</p></div>
+      </div>
+      <div class="stack">
+        <div class="notice danger" role="note">
+          <svg class="i" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <div><b>If you or someone else is in immediate danger, call 112 now.</b><br>
+          If you’re thinking about harming yourself, please call Tele-MANAS on 14416 or go to the nearest hospital.</div>
+        </div>
+
+        <section class="grid cols-2">
+          <div class="card helpline"><span class="num red">112</span><div class="grow"><b>National emergency number</b><span>Police, fire and ambulance</span></div><a class="btn btn-danger" href="tel:112">Call</a></div>
+          <div class="card helpline"><span class="num red">108</span><div class="grow"><b>Ambulance</b><span>Medical emergencies</span></div><a class="btn btn-danger" href="tel:108">Call</a></div>
+          <div class="card helpline"><span class="num">14416</span><div class="grow"><b>Tele-MANAS</b><span>Free mental health support, 24×7, many languages</span></div><a class="btn" href="tel:14416">Call</a></div>
+          <div class="card helpline"><span class="num">14446</span><div class="grow"><b>De-addiction helpline</b><span>Counselling and treatment guidance (Ministry of Social Justice)</span></div><a class="btn" href="tel:14446">Call</a></div>
+        </section>
+
+        <div class="grid split">
+          <section class="card">
+            <div class="card-title"><h2>My trusted contacts</h2></div>
+            <ul class="list" id="contactList"></ul>
+            <form class="row" id="contactForm" style="margin-top:16px;align-items:end">
+              <div class="field" style="margin:0"><label for="cName">Name</label><input id="cName" maxlength="40" autocomplete="off" required></div>
+              <div class="field" style="margin:0"><label for="cPhone">Phone</label><input id="cPhone" type="tel" maxlength="20" inputmode="tel" autocomplete="off" required></div>
+              <button class="btn btn-secondary" type="submit" style="grid-column:1/-1">Add contact</button>
+            </form>
+          </section>
+          <section class="card" style="align-self:start">
+            <div class="card-title"><h2>My reasons</h2></div>
+            <div class="field"><label class="sr-only" for="reasons">Why I’m doing this</label>
+              <textarea id="reasons" maxlength="500" placeholder="Why does staying on track matter to you? Read this when it gets hard."></textarea></div>
+            <button class="btn btn-secondary" id="saveReasons" type="button">Save</button>
+          </section>
+        </div>
+
+        <section class="card">
+          <div class="card-title"><h2>While you wait for a craving to pass</h2><button class="btn btn-sm" id="breatheBtn" type="button">Start breathing exercise</button></div>
+          <ol class="steps">
+            <li><div><b>Delay.</b> Promise yourself 10 minutes. Urges rise, peak and fall, and you don’t have to act on them.</div></li>
+            <li><div><b>Change your space.</b> Go outside, wash your face with cold water, or move to a room with other people.</div></li>
+            <li><div><b>Ground yourself.</b> Name 5 things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste.</div></li>
+            <li><div><b>Check HALT.</b> Are you Hungry, Angry, Lonely or Tired? Meet that need first.</div></li>
+            <li><div><b>Reach out.</b> Text or call one of your contacts. You don’t need a perfect explanation.</div></li>
+          </ol>
+          <p class="muted small" style="margin-top:14px">Stopping some substances suddenly (especially alcohol and sedatives) can be medically dangerous. Speak to a doctor before quitting on your own.</p>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/exercises.js"></script>
+  <script src="js/emergency.js"></script>
+</body>
+</html>

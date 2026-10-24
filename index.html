@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Log in · Renew</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login" data-auth="public">
+  <div class="auth">
+    <section class="auth-brand" aria-hidden="true">
+      <div class="logo"><span class="brand-mark"><svg class="i" viewBox="0 0 24 24"><path d="M12 22V12"/><path d="M12 12C12 7 8 4 3 4c0 5 3 8 9 8z"/><path d="M12 14c0-4 3-7 9-7 0 5-3 8-9 8z"/></svg></span>Renew</div>
+      <div>
+        <h2>One day at a time.</h2>
+        <p>Track your streak, build healthier habits, and get support the moment a craving hits.</p>
+        <ul class="auth-points">
+          <li><svg class="i" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Daily streak and milestones</li>
+          <li><svg class="i" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Breathing and focus exercises for cravings</li>
+          <li><svg class="i" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>A supportive AI companion, available any time</li>
+        </ul>
+      </div>
+      <div class="auth-foot">Renew is a self-help tool and not a substitute for professional care.</div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <h1>Welcome back</h1>
+        <p class="sub">Log in to continue your journey.</p>
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <label for="loginUser">Username</label>
+            <input id="loginUser" name="username" type="text" autocomplete="username" autocapitalize="none" required>
+          </div>
+          <div class="field">
+            <label for="loginPass">Password</label>
+            <div class="input-group">
+              <input id="loginPass" name="password" type="password" autocomplete="current-password" required>
+              <button type="button" class="toggle-pass" data-toggle="loginPass" aria-label="Show password">Show</button>
+            </div>
+          </div>
+          <div id="loginMsg" class="form-msg" role="alert" aria-live="assertive"></div>
+          <button class="btn btn-lg btn-block" type="submit">Log in</button>
+        </form>
+        <p class="auth-alt">New here? <a href="signup.html">Create an account</a></p>
+      </div>
+    </section>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

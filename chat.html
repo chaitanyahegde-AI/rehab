@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>AI Companion · Renew</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="chat">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <div class="page-header">
+        <div><h1>AI companion</h1><p>A supportive space to talk through cravings, stress and setbacks.</p></div>
+        <button class="btn btn-secondary btn-sm" id="clearChat" type="button">Clear conversation</button>
+      </div>
+      <section class="card chat-shell" aria-label="Chat">
+        <div class="messages" id="messages" role="log" aria-live="polite"></div>
+        <div class="composer">
+          <div class="chips" id="quick">
+            <button class="chip" type="button">I’m having a craving</button>
+            <button class="chip" type="button">I had a slip and feel bad</button>
+            <button class="chip" type="button">I can’t sleep</button>
+            <button class="chip" type="button">Motivate me today</button>
+          </div>
+          <form id="chatForm">
+            <label class="sr-only" for="userInput">Message</label>
+            <textarea id="userInput" rows="1" maxlength="1000" placeholder="How are you feeling? Press Enter to send." autocomplete="off"></textarea>
+            <button class="btn" id="sendBtn" type="submit" aria-label="Send"><svg class="i" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+          </form>
+        </div>
+      </section>
+      <p class="muted small" style="margin-top:12px">AI can make mistakes and is not a substitute for professional help. In an emergency call <a href="tel:112">112</a> or Tele-MANAS <a href="tel:14416">14416</a>.</p>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>
